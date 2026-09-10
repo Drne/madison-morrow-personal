@@ -27,11 +27,6 @@ export function Hero({ onViewWork, onContact }: HeroProps) {
       </div>
 
       <div className="hero-panel" aria-label="Producer highlights">
-        <div className="portrait-grid" aria-label="Madison Morrow portrait collection">
-          <img src={madison1} alt="Madison Morrow portrait 1" className="portrait-image portrait-image-large" />
-          <img src={madison2} alt="Madison Morrow portrait 2" className="portrait-image portrait-image-small" />
-        </div>
-
         <div className="stat-card large-card">
           <span>Selected projects</span>
           <strong>14</strong>
@@ -43,6 +38,11 @@ export function Hero({ onViewWork, onContact }: HeroProps) {
         <div className="stat-card">
           <span>Audience reach</span>
           <strong>32k</strong>
+        </div>
+
+        <div className="portrait-grid" aria-label="Madison Morrow portrait collection">
+          <img src={madison1} alt="Madison Morrow portrait 1" className="portrait-image portrait-image-large" />
+          <img src={madison2} alt="Madison Morrow portrait 2" className="portrait-image portrait-image-small" />
         </div>
       </div>
     </section>

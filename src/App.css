@@ -188,15 +188,19 @@ main {
 
 .hero-panel {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+  align-items: start;
 }
 
 .portrait-grid {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 14px;
   align-items: stretch;
-  min-height: 260px;
+  min-height: 220px;
+  max-height: 260px;
 }
 
 .portrait-image {
@@ -206,14 +210,13 @@ main {
   border-radius: 22px;
   border: 1px solid rgba(23, 21, 19, 0.08);
   box-shadow: 0 18px 40px rgba(27, 20, 17, 0.12);
+  display: block;
 }
 
-.portrait-image-large {
-  min-height: 260px;
-}
-
+.portrait-image-large,
 .portrait-image-small {
-  min-height: 260px;
+  min-height: 220px;
+  max-height: 260px;
 }
 
 .stat-card {
@@ -223,9 +226,11 @@ main {
   border: 1px solid rgba(23, 21, 19, 0.08);
   backdrop-filter: blur(6px);
   box-shadow: 0 16px 30px rgba(34, 29, 27, 0.05);
+  min-height: 132px;
 }
 
 .large-card {
+  grid-column: 1 / -1;
   min-height: 170px;
   display: flex;
   flex-direction: column;
