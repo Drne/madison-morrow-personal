@@ -20,7 +20,7 @@ export function BlogPostPage() {
 
     const loadPost = async () => {
       try {
-        const response = await fetch(`/blog/${matchingEntry.fileName}`)
+        const response = await fetch(`${import.meta.env.BASE_URL}blog/${matchingEntry.fileName}`)
         if (!response.ok) {
           throw new Error(`Missing markdown file: ${matchingEntry.fileName}`)
         }

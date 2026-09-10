@@ -18,7 +18,7 @@ export function HomePage() {
       try {
         const loaded = await Promise.all(
           blogCatalog.map(async ({ slug, fileName, title, date, summary }) => {
-            const response = await fetch(`/blog/${fileName}`)
+            const response = await fetch(`${import.meta.env.BASE_URL}blog/${fileName}`)
             if (!response.ok) {
               throw new Error(`Missing markdown file: ${fileName}`)
             }
